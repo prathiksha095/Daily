@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expense Tracker</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Daily Expense Tracker</h1>
+        <p class="subtitle">Manage your daily expenses easily!</p>
+
+        <!-- Expense Form -->
+        <div class="expense-form">
+            <h2>Add New Expense</h2>
+
+            <input type="text" id="expenseName"
+                   placeholder="Enter expense name">
+
+            <input type="number" id="expenseAmount"
+                   placeholder="Enter amount">
+
+            <select id="expenseCategory">
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button id="addButton">Add Expense</button>
+        </div>
+
+        <!-- Total Amount -->
+        <div class="summary">
+            <h2>Total Expenses</h2>
+            <p>₹<span id="totalAmount">0</span></p>
+        </div>
+
+        <!-- Budget -->
+        <div class="budget-box">
+            <label for="budget">Monthly Budget (₹)</label>
+            <input type="number" id="budget"
+                   placeholder="Enter your budget">
+            <p>Remaining: ₹<span id="remaining">0</span></p>
+        </div>
+
+        <!-- Highest Expense -->
+        <div class="highest-box">
+            <h3>Highest Expense</h3>
+            <p id="highestExpense">No expenses yet</p>
+        </div>
+
+        <!-- Expense List -->
+        <h2>My Expenses</h2>
+
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <div id="expenseList">
+            <!-- Expenses will appear here -->
+        </div>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
